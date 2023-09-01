@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import headerImage from "../assets/images/header.png";
+import MovieSection from "../movieSection/MovieSection";
 export default function Header() {
   return (
     <div>
@@ -8,7 +9,7 @@ export default function Header() {
         <img src={headerImage} alt="header" className="header-img" />
         <h2 className="header-title">GhibliVerse</h2>
         <div className="header-summary">
-          <p>
+          <p align="justify">
             Studio Ghibli is a renowned Japanese animation studio that has made
             a significant impact on global cinema. Founded in 1985 by Hayao
             Miyazaki, Isao Takahata, and Toshio Suzuki, Ghibli is known for
@@ -24,6 +25,7 @@ export default function Header() {
           </p>
         </div>
       </div>
+      <MovieSection />
     </div>
   );
 }

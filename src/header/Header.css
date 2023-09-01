@@ -3,6 +3,14 @@
   src: url("../assets/fonts/creation.otf");
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header-img {
   width: 100vw;
   height: auto;
@@ -17,6 +25,7 @@
   transform: translate(-50%, -50%);
   font-size: 5em;
   font-family: Creation;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .header-summary {
@@ -37,4 +46,30 @@
 .header-summary:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+
+@media (max-width: 480px) {
+  .header-img {
+    height: 350px;
+    max-width: 480px;
+  }
+
+  body {
+    max-width: 480px;
+  }
+
+  .header-title {
+    font-size: 3em;
+  }
+
+  .header-summary {
+    position: relative;
+    color: black;
+    width: 75%;
+    margin-left: 30px;
+  }
+  .header-summary p {
+    font-size: 15px;
+  }
 }
